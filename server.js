@@ -46,7 +46,7 @@ app.get("/layouts", (req, res, next) => {
 
 // Get all layout name by id
 app.get("/layout/:id/name", (req, res, next) => {
-    const sql = `select name from layout where layout_id = ?`;
+    const sql = `select layout_id, name from layout where layout_id = ?`;
     const params = req.params.id;
 
     db.get(sql, [params], (err, row) => {
@@ -54,7 +54,7 @@ app.get("/layout/:id/name", (req, res, next) => {
             res.status(400).json({"error":err.message});
             return;
         }
-        res.send(row.name)
+        res.send(row)
     })
 });
 
