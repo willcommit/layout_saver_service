@@ -82,7 +82,7 @@ app.get("/layout/:id/screen/:id2/fullscreen", (req, res, next) => {
             res.status(400).json({"error":err.message});
             return;
         }
-        res.send(row.fullscreen.toString())
+        res.send(row)
     })
 });
 
@@ -111,7 +111,7 @@ app.get("/layout/:id/decoder/:id2/value", (req, res, next) => {
             res.status(400).json({"error":err.message});
             return;
         }
-        res.send(row.value.toString())
+        res.send(row)
     })
 });
 
