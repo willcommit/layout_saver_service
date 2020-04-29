@@ -130,6 +130,7 @@ app.post("/layout/:id/name", (req, res, next) => {
             res.status(400).json({"error":err.message});
             return;
         }
+        console.log(req.body)
         res.send("Posted");
     })
 });
