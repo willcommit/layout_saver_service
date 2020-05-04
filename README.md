@@ -1,10 +1,14 @@
-## INSTALL AND START
+## INSTALL, START AND UPDATE
 
+**INSTALL**  
 In directory of choice:  
 CLI: git clone https://github.com/willcommit/layout_saver_service.git  
 CLI: cd layout_saver_service  
 CLI: npm install  
 CLI: npm start  
+
+**UPDATE**  
+CLI: git pull master origin
 
 ## API URI
 
