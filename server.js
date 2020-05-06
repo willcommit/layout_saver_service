@@ -74,7 +74,7 @@ app.get("/layout/:id/screens", (req, res, next) => {
 
 // Get fullscreen mode based on specific screen on specific layout
 app.get("/layout/:id/screen/:id2/fullscreen", (req, res, next) => {
-    const sql = `select fullscreen from screen where layout_id = ? and screen_nr = ?`;
+    const sql = `select fullscreen, layout_id, screen_nr from screen where layout_id = ? and screen_nr = ?`;
     const params = [req.params.id, req.params.id2];
 
     db.get(sql, params, (err, row) => {
@@ -103,15 +103,15 @@ app.get("/layout/:id/decoders", (req, res, next) => {
 
 // Get decoder value based on specific decoder on specific layout 
 app.get("/layout/:id/decoder/:id2/value", (req, res, next) => {
-    const sql = `select value from decoder where layout_id = ? and decoder_nr = ?`;
+    const sql = `select value, layout_id, decoder_nr from decoder where layout_id = ? and decoder_nr = ?`;
     const params = [req.params.id, req.params.id2];
 
-    db.get(sql, params, (err, row) => {
+    db.get(sql, params, (err, rows) => {
         if(err) {
             res.status(400).json({"error":err.message});
             return;
         }
-        res.send(row)
+        res.send(rows)
     })
 });
 
