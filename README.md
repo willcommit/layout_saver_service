@@ -8,7 +8,7 @@ CLI: npm install
 CLI: npm start  
 
 **UPDATE**  
-CLI: git pull master origin
+CLI: npm run server_update
 
 ## API URI
 

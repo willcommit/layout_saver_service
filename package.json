@@ -5,12 +5,13 @@
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server_update": "git pull origin master"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
-    "sqlite3": "^4.1.1"
+    "sqlite3": "^4.2.0"
   }
 }
