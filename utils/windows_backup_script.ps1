@@ -1,0 +1,1 @@
+﻿Copy-Item ..\layout_saver_DB.db ..\db_backup\layout_saver_DB_$( get-date -f yyyy-MM-dd).db
