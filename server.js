@@ -1,13 +1,16 @@
 var express = require("express")
 var app = express()
 const sqlite = require('sqlite3').verbose();
+const settingsHandler = require("./utils/settingsHandler.js")
 
 var bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-// Database name and location
-const DATABASE = "layout_saver_DB.db" 
+const localSettings = settingsHandler.loadSettings("settings.json")
+const DATABASE = localSettings.database.path
+
+console.log("Database: " + DATABASE)
 
 // Setup database 
 let db = new sqlite.Database(DATABASE, (err) => {
