@@ -5,7 +5,17 @@ In directory of choice:
 CLI: git clone https://github.com/willcommit/layout_saver_service.git  
 CLI: cd layout_saver_service  
 CLI: npm install  
-CLI: npm start  
+CLI: npm start
+
+**INSTALL DATABASE**  
+Add absolute database path to settings.json file  
+
+**INSTALL SERVER AS WINDOWS SERVICE (start on boot)**  
+To create service:  
+CLI: npm run service_create  
+ 
+To remove service:  
+CLI: npm run service_remove  
 
 **UPDATE**  
 CLI: npm run server_update

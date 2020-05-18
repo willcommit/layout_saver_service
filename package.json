@@ -6,6 +6,8 @@
   "scripts": {
     "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
+    "service_create": "node ./utils/createService.js",
+    "service_remove": "node ./utils/removerService.js",
     "server_update": "git pull origin master"
   },
   "author": "",
