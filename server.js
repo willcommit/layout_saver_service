@@ -7,7 +7,9 @@ var bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-const localSettings = settingsHandler.loadSettings("settings.json")
+const settingsFile = require('path').join(__dirname,'./settings.json')
+const localSettings = settingsHandler.loadSettings(settingsFile)
+//const DATABASE = "C:\\Users\\welfv\\Desktop\\layout_saver_DB.db"
 const DATABASE = localSettings.database.path
 
 console.log("Database: " + DATABASE)

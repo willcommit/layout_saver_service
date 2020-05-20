@@ -1,0 +1,88 @@
+2020-05-20 10:54:04 - Starting C:\Program Files\nodejs\node.exe  --harmony --max_old_space_size=4096 C:\Users\welfv\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file C:\Users\welfv\Desktop\layout_saver_service\server.js --scriptoptions= --log "LayoutSaver wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2020-05-20 10:54:04 - Started 23456
+2020-05-20 10:54:19 - Starting C:\Program Files\nodejs\node.exe  --harmony --max_old_space_size=4096 C:\Users\welfv\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file C:\Users\welfv\Desktop\layout_saver_service\server.js --scriptoptions= --log "LayoutSaver wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2020-05-20 10:54:19 - Started 4556
+2020-05-20 11:00:13 - Starting C:\Program Files\nodejs\node.exe  --harmony --max_old_space_size=4096 C:\Users\welfv\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file C:\Users\welfv\Desktop\layout_saver_service\server.js --scriptoptions= --log "LayoutSaver wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2020-05-20 11:00:13 - Started 20848
+2020-05-20 11:01:43 - Starting C:\Program Files\nodejs\node.exe  --harmony --max_old_space_size=4096 C:\Users\welfv\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file C:\Users\welfv\Desktop\layout_saver_service\server.js --scriptoptions= --log "LayoutSaver wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2020-05-20 11:01:43 - Started 15764
+2020-05-20 11:04:47 - Stopping layoutsaver.exe
+2020-05-20 11:04:47 - ProcessKill 15764
+2020-05-20 11:04:47 - Found child process: 1644 Name: conhost.exe
+2020-05-20 11:04:47 - Found child process: 20068 Name: node.exe
+2020-05-20 11:04:47 - Stopping process 1644
+2020-05-20 11:04:47 - Send SIGINT 1644
+2020-05-20 11:04:47 - SIGINT to 1644 failed - Killing as fallback
+2020-05-20 11:04:47 - Stopping process 20068
+2020-05-20 11:04:47 - Send SIGINT 20068
+2020-05-20 11:04:47 - SIGINT to 20068 failed - Killing as fallback
+2020-05-20 11:04:47 - Stopping process 15764
+2020-05-20 11:04:47 - Send SIGINT 15764
+2020-05-20 11:04:47 - SIGINT to 15764 failed - Killing as fallback
+2020-05-20 11:04:47 - Finished layoutsaver.exe
+2020-05-20 11:04:48 - Starting C:\Program Files\nodejs\node.exe  --harmony --max_old_space_size=4096 C:\Users\welfv\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file C:\Users\welfv\Desktop\layout_saver_service\server.js --scriptoptions= --log "LayoutSaver wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2020-05-20 11:04:48 - Started 20628
+2020-05-20 11:04:58 - Stopping layoutsaver.exe
+2020-05-20 11:04:58 - ProcessKill 20628
+2020-05-20 11:04:58 - Found child process: 17256 Name: conhost.exe
+2020-05-20 11:04:58 - Found child process: 8628 Name: node.exe
+2020-05-20 11:04:58 - Stopping process 17256
+2020-05-20 11:04:58 - Send SIGINT 17256
+2020-05-20 11:04:58 - SIGINT to 17256 failed - Killing as fallback
+2020-05-20 11:04:58 - Stopping process 8628
+2020-05-20 11:04:58 - Send SIGINT 8628
+2020-05-20 11:04:58 - SIGINT to 8628 failed - Killing as fallback
+2020-05-20 11:04:58 - Stopping process 20628
+2020-05-20 11:04:58 - Send SIGINT 20628
+2020-05-20 11:04:58 - SIGINT to 20628 failed - Killing as fallback
+2020-05-20 11:04:58 - Finished layoutsaver.exe
+2020-05-20 11:05:01 - Starting C:\Program Files\nodejs\node.exe  --harmony --max_old_space_size=4096 C:\Users\welfv\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file C:\Users\welfv\Desktop\layout_saver_service\server.js --scriptoptions= --log "LayoutSaver wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2020-05-20 11:05:01 - Started 19844
+2020-05-20 11:07:07 - Stopping layoutsaver.exe
+2020-05-20 11:07:07 - ProcessKill 19844
+2020-05-20 11:07:07 - Found child process: 22344 Name: conhost.exe
+2020-05-20 11:07:07 - Found child process: 10148 Name: node.exe
+2020-05-20 11:07:07 - Stopping process 22344
+2020-05-20 11:07:07 - Send SIGINT 22344
+2020-05-20 11:07:07 - SIGINT to 22344 failed - Killing as fallback
+2020-05-20 11:07:07 - Stopping process 10148
+2020-05-20 11:07:07 - Send SIGINT 10148
+2020-05-20 11:07:07 - SIGINT to 10148 failed - Killing as fallback
+2020-05-20 11:07:07 - Stopping process 19844
+2020-05-20 11:07:07 - Send SIGINT 19844
+2020-05-20 11:07:07 - SIGINT to 19844 failed - Killing as fallback
+2020-05-20 11:07:07 - Finished layoutsaver.exe
+2020-05-20 11:07:10 - Starting C:\Program Files\nodejs\node.exe  --harmony --max_old_space_size=4096 C:\Users\welfv\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file C:\Users\welfv\Desktop\layout_saver_service\server.js --scriptoptions= --log "LayoutSaver wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2020-05-20 11:07:10 - Started 22580
+2020-05-20 11:07:44 - Stopping layoutsaver.exe
+2020-05-20 11:07:44 - ProcessKill 22580
+2020-05-20 11:07:44 - Found child process: 7396 Name: conhost.exe
+2020-05-20 11:07:44 - Found child process: 4132 Name: node.exe
+2020-05-20 11:07:44 - Stopping process 7396
+2020-05-20 11:07:44 - Send SIGINT 7396
+2020-05-20 11:07:44 - SIGINT to 7396 failed - Killing as fallback
+2020-05-20 11:07:44 - Stopping process 4132
+2020-05-20 11:07:44 - Send SIGINT 4132
+2020-05-20 11:07:44 - SIGINT to 4132 failed - Killing as fallback
+2020-05-20 11:07:44 - Stopping process 22580
+2020-05-20 11:07:44 - Send SIGINT 22580
+2020-05-20 11:07:44 - SIGINT to 22580 failed - Killing as fallback
+2020-05-20 11:07:44 - Finished layoutsaver.exe
+2020-05-20 11:07:47 - Starting C:\Program Files\nodejs\node.exe  --harmony --max_old_space_size=4096 C:\Users\welfv\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file C:\Users\welfv\Desktop\layout_saver_service\server.js --scriptoptions= --log "LayoutSaver wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2020-05-20 11:07:47 - Started 16684
+2020-05-20 11:08:21 - Stopping layoutsaver.exe
+2020-05-20 11:08:21 - ProcessKill 16684
+2020-05-20 11:08:21 - Shutdown exception
+Message:A system shutdown is in progress.
+
+Stacktrace:   at System.Runtime.InteropServices.Marshal.ThrowExceptionForHRInternal(Int32 errorCode, IntPtr errorInfo)
+   at System.Management.ManagementScope.InitializeGuts(Object o)
+   at System.Management.ManagementScope.Initialize()
+   at System.Management.ManagementObjectSearcher.Initialize()
+   at System.Management.ManagementObjectSearcher.Get()
+   at winsw.WrapperService.GetChildPids(Int32 pid)
+   at winsw.WrapperService.StopProcessAndChildren(Int32 pid)
+   at winsw.WrapperService.StopIt()
+   at winsw.WrapperService.OnShutdown()
+2020-05-20 11:08:53 - Starting C:\Program Files\nodejs\node.exe  --harmony --max_old_space_size=4096 C:\Users\welfv\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file C:\Users\welfv\Desktop\layout_saver_service\server.js --scriptoptions= --log "LayoutSaver wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2020-05-20 11:08:53 - Started 5588
