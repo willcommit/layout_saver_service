@@ -12,6 +12,28 @@ const localSettings = settingsHandler.loadSettings(settingsFile)
 //const DATABASE = "C:\\Users\\welfv\\Desktop\\layout_saver_DB.db"
 const DATABASE = localSettings.database.path
 
+const CREATE_LAYOUT = `CREATE TABLE "layout" (
+	"layout_id"	INTEGER NOT NULL CHECK(layout_id >= 1 AND layout_id <= 16) UNIQUE,
+	"name"	TEXT,
+	PRIMARY KEY("layout_id")
+)`
+
+const CREATE_DECODER = `CREATE TABLE "decoder" (
+	"decoder_nr"	INTEGER NOT NULL CHECK(decoder_nr>=1 AND decoder_nr<=60),
+	"value"	INTEGER NOT NULL,
+	"layout_id"	INTEGER NOT NULL,
+	PRIMARY KEY("decoder_nr","layout_id"),
+	FOREIGN KEY("layout_id") REFERENCES "layout"("layout_id") ON UPDATE SET NULL ON DELETE SET NULL
+)`
+
+const CREATE_SCREEN = `CREATE TABLE "screen" (
+	"screen_nr"	INTEGER NOT NULL CHECK(screen_nr>=1 AND screen_nr<=6),
+	"fullscreen"	NUMERIC NOT NULL DEFAULT 0 CHECK(fullscreen=1 or fullscreen=0),
+	"layout_id"	INTEGER NOT NULL,
+	PRIMARY KEY("screen_nr","layout_id"),
+	FOREIGN KEY("layout_id") REFERENCES "layout"("layout_id") ON UPDATE SET NULL ON DELETE SET NULL
+)`
+
 console.log("Database: " + DATABASE)
 
 // Setup database 
@@ -20,8 +42,51 @@ let db = new sqlite.Database(DATABASE, (err) => {
         console.error(err.message)
         throw err
     }
-    console.log('connected to DB!')
+
+    db.run(CREATE_LAYOUT,
+    (err) => {
+        if(err) {
+            console.log("Table already created")
+        }
+
+        const sql = `INSERT INTO layout (layout_id,name)
+                    VALUES($id, $name)
+                    ON CONFLICT(layout_id) 
+                    DO UPDATE SET name= $name`;
+
+        for (let index = 1; index <= 16; index++) {
+
+            const layout_id = index
+            const layoutName = "Layout " + index
+
+            db.run(sql, {$id:layout_id, $name:layoutName}, (err, row) => {
+                if(err) {
+                    res.status(400).json({"error":err.message});
+                    return;
+                }
+            })
+        }
+        console.log("Layout table setup")  
+    })
+
+    db.run(CREATE_SCREEN, 
+    (err) => { 
+        if(err){
+            console.log("Screen table alread created")
+        }
+        console.log("Screen table setup")  
+    })
+
+    db.run(CREATE_DECODER, 
+    (err) => { 
+        if(err){
+            console.log("Decoder already table created")
+        }
+        console.log("Decoder table setup")  
+    })
 })
+    
+
 
 // Server port
 var HTTP_PORT = 8000 
