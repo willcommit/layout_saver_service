@@ -1,5 +1,6 @@
 {
     "database": {
         "path": "C:\\Users\\wen.FURUNO\\Desktop\\layout_saver_DB.db"
-    }      
+    },
+    "layout_amount": 8
 }

@@ -2,6 +2,7 @@ var express = require("express")
 var app = express()
 const sqlite = require('sqlite3').verbose();
 const settingsHandler = require("./utils/settingsHandler.js")
+const fs = require('fs')
 
 var bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -32,6 +33,11 @@ const CREATE_SCREEN = `CREATE TABLE "screen" (
 	"layout_id"	INTEGER NOT NULL,
 	PRIMARY KEY("screen_nr","layout_id"),
 	FOREIGN KEY("layout_id") REFERENCES "layout"("layout_id") ON UPDATE SET NULL ON DELETE SET NULL
+)`
+
+const CREATE_SETTING = `CREATE TABLE "setting" (
+	"layout_amount"	INTEGER NOT NULL CHECK(layout_amount>=1 AND layout_amount<=60) UNIQUE,
+	PRIMARY KEY("layout_amount")
 )`
 
 console.log("Database: " + DATABASE)
@@ -86,8 +92,6 @@ let db = new sqlite.Database(DATABASE, (err) => {
     })
 })
     
-
-
 // Server port
 var HTTP_PORT = 8000 
 // Start server
@@ -168,7 +172,6 @@ app.get("/layout/:id/decoders", (req, res, next) => {
         }
         res.json(rows)
     })
-
 });
 
 // Get decoder value based on specific decoder on specific layout 
@@ -185,7 +188,21 @@ app.get("/layout/:id/decoder/:id2/value", (req, res, next) => {
     })
 });
 
+// Get layout amount from setting 
+app.get("/setting/layout_amount/", (req, res, next) => {
+    let jsonData = fs.readFileSync(settingsFile)
+    let settings = JSON.parse(jsonData)
+    
+    res.json(settings['layout_amount'])
+});
+
+// Post layout amount from setting
+// app.post("/setting/layout_amount/amount", (req, res, next) => {
+      
+// });
+
 // create or update layout with a name
+
 app.post("/layout/:id/name", (req, res, next) => {
     const sql = `INSERT INTO layout (layout_id,name)
                     VALUES($id, $name)
